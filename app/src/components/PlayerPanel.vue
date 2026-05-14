@@ -1,7 +1,7 @@
 <template>
   <section class="player-panel l--stack -g:10">
     <div class="video-input-row l--flex -ai:center -g:10">
-      <img class="brand-logo" src="/logo.png" alt="mkstamper" />
+      <img class="brand-logo" :src="`${baseUrl}logo.png`" alt="mkstamper" />
       <div class="input-action-row l--flex -ai:center -g:10">
         <input
           :value="videoInput"
@@ -66,6 +66,8 @@
 </template>
 
 <script setup lang="ts">
+  const baseUrl = import.meta.env.BASE_URL
+
   defineProps<{
     videoInput: string
     currentTime: number
