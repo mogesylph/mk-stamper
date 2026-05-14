@@ -17,7 +17,7 @@ export const useSongCatalog = () => {
   )
 
   const loadSongCatalog = async () => {
-    const res = await fetch('/songlist.tsv')
+    const res = await fetch(`${import.meta.env.BASE_URL}songlist.tsv`)
     if (!res.ok) {
       throw new Error(`Failed to load songlist.tsv: ${res.status}`)
     }
