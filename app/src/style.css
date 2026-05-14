@@ -1,0 +1,117 @@
+:root {
+  --base: #fffdf9;
+  --base-2: #f4efe8;
+  --base-3: #e8ded2;
+  --text: #241d1a;
+  --text-2: #6d625c;
+  --divider: #d7c8bb;
+  --brand: #7f5134;
+  --accent: #d69455;
+  --focus-ring: rgba(127, 81, 52, 0.22);
+  --shadow: 0 12px 32px rgba(36, 29, 26, 0.08);
+
+  --sans: 'Avenir Next', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 14px/1.4 var(--sans);
+  letter-spacing: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(214, 148, 85, 0.14), transparent 30%),
+    linear-gradient(180deg, #f8f2ea 0%, #fdfbf8 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  color: var(--text);
+  background: transparent;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+input {
+  min-width: 0;
+  border: 1px solid var(--divider);
+  border-radius: var(--bdrs--20);
+  padding: 0.26rem 0.42rem;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--base);
+}
+
+input:focus {
+  border-color: var(--brand);
+  outline: 3px solid var(--focus-ring);
+}
+
+button {
+  border: 1px solid var(--brand);
+  border-radius: var(--bdrs--20);
+  padding: 0.26rem 0.56rem;
+  color: var(--base);
+  background: var(--brand);
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+button:hover {
+  background: #68402a;
+  border-color: #68402a;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+button.icon-button {
+  color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 10%, var(--base));
+  border-color: transparent;
+}
+
+button.icon-button:hover {
+  color: var(--base);
+  background: var(--brand);
+}
+
+button.danger-button {
+  background: #a64d43;
+  border-color: #a64d43;
+}
+
+button.danger-button:hover {
+  background: #8d3f37;
+  border-color: #8d3f37;
+}
+
+.surface-card {
+  border: 1px solid var(--divider);
+  border-radius: var(--bdrs--30);
+  background: rgba(255, 253, 249, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.status-line {
+  color: var(--text-2);
+  font-size: 0.8rem;
+}
+
+h1,
+h2 {
+  color: var(--brand);
+  font-weight: 650;
+}
